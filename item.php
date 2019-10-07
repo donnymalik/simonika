@@ -1,10 +1,3 @@
-<?php
-    include 'koneksi.php';
-    $id = $_GET['id'];
-    $query = mysqli_query($conn,"SELECT * FROM ii WHERE id = $id") or die (mysqli_error());
-    $data=mysqli_fetch_array($query);
-?>
-
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
@@ -26,8 +19,10 @@
             <!-- Blog Post Content Column -->
             <?php
             include 'koneksi.php';
-            $id = $_GET['id']; //get the no which will updated
-            $query = mysqli_query($conn,"SELECT * FROM ii WHERE id = $id") or die (mysqli_error());
+            $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+            $id_ = mysqli_real_escape_string($conn, stripslashes($id));
+            
+            $query = mysqli_query($conn, "SELECT * FROM ii WHERE id = $id_") or die (mysqli_error());
             while ($data=mysqli_fetch_array($query))
             {
                 $idi    = $data['id'];

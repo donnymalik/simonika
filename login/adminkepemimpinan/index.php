@@ -1,6 +1,11 @@
 <?php 
-$koneksi = new mysqli ("localhost","bpsdmdjateng_simonika","53714bvdi201a","bpsdmdjateng_simonika");
+session_start();
+if (!isset($_SESSION['nama'])) {
+    header("Location: ../../");
+}
+$koneksi = new mysqli("localhost", "root", "", "bpsdmdjateng_simonika");
 
+//header('Cache-control: private');
 ?>
 <?php
 session_start();
@@ -13,15 +18,15 @@ header('Cache-control: private');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Si-MONIKA BPSDMD Prov. Jateng</title>
 	<!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../admin/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../admin/assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="../admin/assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-   <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+   <link href="../admin/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
    <link rel="shortcut icon" href="images/logo.png">
 </head>
 <body>
@@ -39,14 +44,14 @@ header('Cache-control: private');
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Selamat Datang di Si-MONIKA (Sistem Informasi Manajemen Online Kurikulum Kediklatan) BPSDMD Provinsi Jawa Tengah &nbsp; <a href="http://simonika.bpsdmd.jatengprov.go.id" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Selamat Datang di Si-MONIKA (Sistem Informasi Manajemen Online Kurikulum Kediklatan) BPSDMD Provinsi Jawa Tengah &nbsp; <a href="logout.php" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img src="../admin/assets/img/find_user.png" class="user-image img-responsive"/>
 				</li>
                     <li>
                         <a  href="index.php"><i class="fa fa-dashboard fa-3x"></i> Menu</a>
@@ -109,23 +114,23 @@ font-size: 16px;"> Selamat Datang di Si-MONIKA (Sistem Informasi Manajemen Onlin
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="../admin/assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../admin/assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
+    <script src="../admin/assets/js/jquery.metisMenu.js"></script>
       <!-- CUSTOM SCRIPTS -->
     
 
-    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
-    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+    <script src="../admin/assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="../admin/assets/js/dataTables/dataTables.bootstrap.js"></script>
         <script>
             $(document).ready(function () {
                 $('#dataTables-example').dataTable();
             });
     </script>
          <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../admin/assets/js/custom.js"></script>
     
    
 </body>
