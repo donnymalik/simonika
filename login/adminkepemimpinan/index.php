@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['nama'])) {
     header("Location: ../../");
 }
-$koneksi = new mysqli("localhost", "root", "", "bpsdmdjateng_simonika");
+include '../../koneksi2.php';
 
 //header('Cache-control: private');
 ?>

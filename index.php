@@ -80,6 +80,7 @@
                     </a>
                 </div>
             </div>
+        </div>
 
 
             <footer>
@@ -114,8 +115,8 @@
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="" style="font-weight:bold;color:#FFFFF0">Statistik</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href=statistik/statistik.php target="blank">Statistik Jenis Diklat</a></li>
-                                    <li><a href=statistik/jk_krk.php target="blank">Statistik Jenis Kurikulum</a></li>
+                                    <li><a href="?page=statistik">Statistik Jenis Diklat</a></li>
+                                    <li><a href="?page=jk_krk">Statistik Jenis Kurikulum</a></li>
 
                                 </ul>
                             </li>
@@ -165,38 +166,43 @@
                     case 'grafik2':
                         include "ii_grafik.php";
                         break;
+                    case 'statistik':
+                        include "statistik.php";
+                        break;
+                    case 'jk_krk':
+                        include "jk_krk.php";
+                        break;
                     default :
                         include "home.php";
                         break;
                 }
                 ?>
-                <!-- Start Footer -->
-
-                <!--Footer-->
-                <footer>
-                    <div class="container">
-                        <hr>
-                        <div class="row">
-
-                            <div class="col-lg-6 col-lg-6 col-lg-12">
-                                <div class="social-network">
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-lg-6 col-lg-12">
-                                <div class="copyright">
-                                    <p>Lokasi <i class="fa fa-archive"></i> : <a target="_blank" href="http://bootstrapthemes.co"> Jalan Setiabudi No. 201 a</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </footer>
-                <!-- End Footer -->
             </div>
+            <!-- Start Footer -->
+
+            <!--Footer-->
+            <footer>
+                <div class="container">
+                    <hr>
+                    <div class="row">
+
+                        <div class="col-lg-6 col-lg-6 col-lg-12">
+                            <div class="social-network">
+                                <a href="https://twitter.com/bpsdmdjtg" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/bpsdmdjtg" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/npsdmdjateng/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-lg-6 col-lg-12">
+                            <div class="copyright">
+                                <p>Lokasi <i class="fa fa-archive"></i> : <a target="_blank" href="http://bpsdmd.jatengprov.go.id"> Jalan Setiabudi No. 201 a</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer -->
     </body>
 </html>
